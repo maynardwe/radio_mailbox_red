@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "radio_mailbox",
+			"path": ".."
+		},
+		{
+			"name": "radio_mailbox_green",
+			"path": "..\\..\\radio_mailbox_green"
+		}
+	],
+	"settings": {}
+}
