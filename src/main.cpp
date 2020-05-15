@@ -191,9 +191,8 @@ void loop() {
   }
   else {
     digitalWrite(LED,LOW);
-        gotMail = false; 
   }
-  delay(1000);
+//  delay(3000);
 
     //---------------------------------------TX/RX---------------------------------
     if (gotMail and rf69.available()) {   // If message available
@@ -211,7 +210,7 @@ void loop() {
           rf69.waitPacketSent();
           Serial.println("TX to Green, set Green LED on for 2 seconds, turn off all LEDs, halt TX, await new mail delivery");
           digitalWrite(GREEN, HIGH);
-          delay(1000);
+          delay(3000);
           digitalWrite(GREEN, LOW);
           digitalWrite(LED, LOW);
           gotMail = false;
