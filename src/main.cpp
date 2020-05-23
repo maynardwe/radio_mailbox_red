@@ -208,7 +208,7 @@ void loop() {
           uint8_t data[] = "Red";
           rf69.send(data, sizeof(data));
           rf69.waitPacketSent();
-          Serial.println("TX to Green, set Green LED on for 2 seconds, turn off all LEDs, halt TX, await new mail delivery");
+          Serial.println("TX to Green, set Green LED on for 20 seconds, turn off all LEDs, halt TX, await new mail delivery");
           digitalWrite(GREEN, HIGH);
           delay(20000);
           digitalWrite(GREEN, LOW);
