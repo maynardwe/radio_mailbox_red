@@ -210,7 +210,7 @@ void loop() {
           rf69.waitPacketSent();
           Serial.println("TX to Green, set Green LED on for 2 seconds, turn off all LEDs, halt TX, await new mail delivery");
           digitalWrite(GREEN, HIGH);
-          delay(3000);
+          delay(20000);
           digitalWrite(GREEN, LOW);
           digitalWrite(LED, LOW);
           gotMail = false;
