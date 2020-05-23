@@ -185,7 +185,7 @@ void loop() {
     ratio = rate/oldrate;
     Serial.println(ratio);
 
-  if (ratio > 1.3) {
+  if (ratio > 1.2) {
     digitalWrite(LED,HIGH);
         gotMail = true; 
   }
