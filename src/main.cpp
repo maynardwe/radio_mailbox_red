@@ -194,7 +194,7 @@ void loop()
       rf69.send(data, sizeof(data));
       rf69.waitPacketSent();
       Serial.println("TX Red - mailbox opened");
-      count++
+      count++;
     }
     digitalWrite(GREEN, LOW);
     gotMail = false;
