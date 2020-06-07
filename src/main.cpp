@@ -164,6 +164,7 @@ void setup()
   Serial.print("RFM69 radio @");
   Serial.print((int)RF69_FREQ);
   Serial.println(" MHz");
+  rate = analogRead(LDR);
 }
 
 //-----------------------------------------------------------------------------------------------------
@@ -195,10 +196,12 @@ void loop()
       rf69.waitPacketSent();
       Serial.println("TX Red - mailbox opened");
       count++;
+      delay(1000);
     }
     digitalWrite(GREEN, LOW);
     gotMail = false;
     count = 0;
+    rate = analogRead(LDR);
   }
   oldrate = rate;
   rate = analogRead(LDR);
