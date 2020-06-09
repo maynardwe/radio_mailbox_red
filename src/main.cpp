@@ -30,7 +30,7 @@
 #define speakerPin 10
 //#endif
 
-float rate, oldrate, ratio;
+float rate;
 //int duration = 1000;   // how long the tone lasts
 bool gotMail = false;
 const int LDR = 0;
@@ -183,7 +183,7 @@ void loop()
     return;
   }
 
-  delay(1000); // Wait 1 second between transmits, could also 'sleep' here!
+  delay(500); // Wait 1 second between transmits, could also 'sleep' here!
                //  if ((digitalRead(MAILBOX) == HIGH) and !gotMail) { ----------------------------
                //gotMail = true; -----------------------------------
   if (gotMail)
@@ -194,7 +194,7 @@ void loop()
     {
       rf69.send(data, sizeof(data));
       rf69.waitPacketSent();
-      Serial.println("TX Red - mailbox opened");
+      Serial.println("TX Red - mailbox opened - " + String(rate));
       count++;
       delay(1000);
     }
@@ -203,15 +203,9 @@ void loop()
     count = 0;
     rate = analogRead(LDR);
   }
-  oldrate = rate;
   rate = analogRead(LDR);
-  Serial.print("rate = ");
-  Serial.print(rate);
-  Serial.print(" ratio new to old rate = ");
-  ratio = rate / oldrate;
-  Serial.println(ratio);
-
-  if (ratio > 1.2)
+  Serial.println("rate = " + String(rate));
+if (rate > 200)
   {
     gotMail = true;
   }

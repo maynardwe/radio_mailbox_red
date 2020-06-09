@@ -1,0 +1,6 @@
+LDR sensitivities
+- finger over LDR - 0.00
+- pond during bright day 10:30AM with all shades down & door closed & both monitors on & arduino to left of laptop - 75-81
+- pond during bright day 10:30AM with back shade up & door closed & both monitors on & arduino to left of laptop - 221-228
+- pond during bright day 10:30AM with both shades up & door closed & both monitors on & arduino to left of laptop - 411-426
+- same as above with hand 1/2 inch from LDR - 151
